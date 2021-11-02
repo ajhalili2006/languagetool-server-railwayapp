@@ -2,8 +2,10 @@
 ARG LT_RELEASE=5.5
 FROM erikvl87/languagetool:${LT_RELEASE}
 
-RUN apk add --no-cache dumb-init
+USER root
+RUN apk add --no-cache dumb-init bash coreutils
 
+USER languagetool
 # Will be handled by the entrypoint scripts
 ENV MINI_HEAP_SIZE=150m MAX_HEAP_SIZE=450m
 
