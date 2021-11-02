@@ -14,4 +14,4 @@ ENV MINI_HEAP_SIZE=150m MAX_HEAP_SIZE=450m
 
 #ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
 ENTRYPOINT [ "dumb-init" ]
-CMD [ "/LanguageTool/start.sh" ]
+CMD [ "bash" , "/LanguageTool/start.sh" ]
